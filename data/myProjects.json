@@ -1,0 +1,154 @@
+[
+    {
+        "id": "project-i-fundnepal",
+        "title": "Fund Nepal - Crowdfunding Platform",
+        "baseLink": "projects/project-i-fundnepal",
+        "category": "Web development",
+        "description": "It's an crowdfunding platform where people can raise a fundraiser campaign as well donate to various fundraiser. Ensuring good interaction between people with a best supporting experience.",
+        "bannerImage": "/fundnepal.png",
+        "featureImage": "/fundnepal_feature.png",
+        "aboutImage": "/fundnepal_about.png",
+        "overview": {
+            "date": "Aug 20, 2024",
+            "type": "College project",
+            "service": "Web development",
+            "client": "No One"
+        },
+        "features": [
+            {
+                "title": "User Authentication",
+                "description": "Secure login with NextAuth."
+            },
+            {
+                "title": "Fundraiser Creation",
+                "description": "Users can start a fundraiser with images, descriptions, and bank details."
+            },
+            {
+                "title": "Donation System",
+                "description": "Payments via eSewa and Khalti."
+            },
+            {
+                "title": "Admin Approval System",
+                "description": "Fundraisers require admin verification before going live."
+            },
+            {
+                "title": "Reporting System",
+                "description": "Users can report fraudulent fundraisers."
+            }
+        ],
+        "technologies": [
+            "Next",
+            "CSS",
+            "Prisma",
+            "MongoDb",
+            "Git",
+            "Netlify",
+            "Postman",
+            "Resend"
+        ],
+        "challenges": [
+            {
+                "challenge": "Integrating nepali payment gateways.",
+                "solution": "Used documentation of related gateways to implement payment system."
+            }
+        ],
+        "gallery": [
+            "/fundnepal.png",
+            "/fundnepal1.png",
+            "/fundnepal2.png",
+            "/fundnepal_about.png"
+        ],
+        "liveDemo": "https://fundnepal.netlify.app",
+        "githubRepo": "https://github.com/sudip15622/fundnepal",
+        "role": "Full-stack developer",
+        "contributions": [
+            "Designed the frontend",
+            "Implemented the backend API and authentication",
+            "Integrated the payment gateway"
+        ],
+        "lessonsLearned": [
+            "How to integrate third-party APIs",
+            "Managing state in large React applications",
+            "Optimizing database queries",
+            "Adding payment gateways in web applications"
+        ]
+    },
+    {
+        "id": "project-ii-shayata",
+        "title": "Shayata - Expert Home Fixes",
+        "baseLink": "projects/project-ii-shayata",
+        "category": "Web development",
+        "description": "Shayata is a platform that connects users with expert home repair professionals. Users can easily request home fixes, and the Shayata team delivers the services. The platform offers smooth user interaction and an easy-to-use admin dashboard.",
+        "bannerImage": "/shayata.png",
+        "featureImage": "/shayata_feature.png",
+        "aboutImage": "/shayata_about.png",
+        "overview": {
+            "date": "July 10, 2023",
+            "type": "Collaborative project",
+            "service": "Web development",
+            "client": "Amrit Subedi (Founder of Shayata)"
+        },
+        "features": [
+            {
+                "title": "Service Request Form",
+                "description": "Users can fill out a detailed form to request various home repair services."
+            },
+            {
+                "title": "Service Categories",
+                "description": "The platform offers a wide range of service categories like plumbing, electrical, and home cleaning."
+            },
+            {
+                "title": "Admin Dashboard",
+                "description": "Admin dashboard to manage service requests, assign tasks, and view analytics."
+            },
+            {
+                "title": "User Dashboard",
+                "description": "Users have access to track service status and manage their requests."
+            },
+            {
+                "title": "Analytics",
+                "description": "Interactive charts and graphs to monitor service requests, deliveries, and other metrics."
+            }
+        ],
+        "technologies": [
+            "Next",
+            "CSS",
+            "Prisma",
+            "MongoDb",
+            "Git",
+            "Netlify",
+            "Postman",
+            "Resend"
+        ],
+        "challenges": [
+            {
+                "challenge": "Managing service requests and scheduling.",
+                "solution": "Implemented an effective task assignment system for admins and streamlined scheduling."
+            },
+            {
+                "challenge": "Ensuring smooth user experience without payment integration.",
+                "solution": "Created an easy-to-navigate interface and focused on offline payment methods."
+            }
+        ],
+        "gallery": [
+            "/shayata.png",
+            "/shayata1.png",
+            "/shayata2.png",
+            "/shayata_about.png"
+        ],
+        "liveDemo": "https://sahayata.xyz",
+        "githubRepo": "https://github.com/sudip15622/sahayata",
+        "role": "Full-stack developer",
+        "contributions": [
+            "Designed the frontend UI/UX",
+            "Implemented backend APIs for service requests and task management",
+            "Created interactive charts and analytics for the admin dashboard"
+        ],
+        "lessonsLearned": [
+            "Building scalable dashboards for users and admins",
+            "Handling data management in real-time applications",
+            "Ensuring seamless user experience without payment integration",
+            "Optimizing large datasets for fast load times"
+        ]
+    }
+]

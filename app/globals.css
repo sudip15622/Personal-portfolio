@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color: #020202;
+  --bg-sec-color: #1a1a1a;
+  --pri-bg: #00ADB5;
+  --sec-bg: #F5A623;
+  --pri-text: #EDEDED;
+  --sec-text: #B3B3B3;
+  --action-color: #ef4444;
+  --border-color: #555555;
+  --bg-gradient: linear-gradient(to bottom, #0F2027, #2C5364);
+  --btn-gradient: linear-gradient(to right, #3A1C71, #D76D77, #FFAF7B);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  /* font-family: "Roboto Slab", serif; */
+  font-family: sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+  color: var(--pri-text);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  width: 100%;
+  max-width: 1310px;
+  margin: 100px auto 250px auto;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 250px;
+}
+
+a {
+  text-decoration: none;
+  /* color: inherit; */
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
 }
