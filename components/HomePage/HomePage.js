@@ -78,7 +78,7 @@ const Home = () => {
         </div>
 
         <picture className='shadow-[0_0_30px_var(--action-color)] rounded-full flex items-center justify-center w-[420px] h-[420px] overflow-hidden'>
-          <Image className='w-full h-full object-cover opacity-70 grayscale transition-all duration-[.4s] hover:grayscale-0 hover:scale-105' width={500} height={400} src="/sudip_croppe.png" alt="portfolio-cover" />
+          <Image className='w-full h-full object-cover transition-all duration-[.4s] hover:grayscale-0 hover:scale-105' width={500} height={400} src="/sudip_main2.jpg" alt="portfolio-cover" />
         </picture>
 
         {/* <ul className="flex flex-col justifly-center gap-7">
@@ -155,8 +155,8 @@ const Home = () => {
           </div>
         </div>
 
-        <picture className='absolute flex items-center justify-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] -z-10 w-[400px] h-auto overflow-hidden'>
-          <Image className='w-full h-full object-cover' width={500} height={400} src="/sudip.jpg" alt="portfolio-about-cover" />
+        <picture className='absolute flex items-center justify-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-40%] -z-10 w-[400px] h-auto overflow-hidden opacity-75'>
+          <Image className='w-full h-full object-cover' width={500} height={400} src="/sudip_main.jpg" alt="portfolio-about-cover" />
         </picture>
 
         <div className='flex flex-col gap-4 max-w-[400px] mt-[80px]'>

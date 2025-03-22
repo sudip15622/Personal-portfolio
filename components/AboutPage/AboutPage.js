@@ -107,8 +107,8 @@ const AboutPage = () => {
   return (
     <main>
       <section className="flex items-center justify-between">
-        <picture className='flex items-center justify-center  w-[420px] h-[420px] overflow-hidden'>
-          <Image width={500} height={400} className='w-full h-full object-cover' src="/sudip.jpg" alt="portfolio-about-cover" />
+        <picture className='flex items-center justify-center  w-[420px] h-[420px] overflow-hidden opacity-80'>
+          <Image width={500} height={400} className='w-full h-full object-cover' src="/sudip_main.jpg" alt="portfolio-about-cover" />
         </picture>
         <motion.div className='flex flex-col'
           initial={{ opacity: 0, y: 50 }}
