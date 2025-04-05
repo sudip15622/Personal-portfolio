@@ -78,7 +78,7 @@ const Home = () => {
         </div>
 
         <picture className='shadow-[0_0_30px_var(--action-color)] rounded-full flex items-center justify-center w-[420px] h-[420px] overflow-hidden'>
-          <Image className='w-full h-full object-cover transition-all duration-[.4s] hover:grayscale-0 hover:scale-105' width={500} height={400} src="/sudip_main2.jpg" alt="portfolio-cover" />
+          <Image className='w-full h-full object-cover transition-all duration-[.4s] hover:scale-105' width={500} height={400} src="/sudip_main2.jpg" alt="portfolio-cover" />
         </picture>
 
         {/* <ul className="flex flex-col justifly-center gap-7">
