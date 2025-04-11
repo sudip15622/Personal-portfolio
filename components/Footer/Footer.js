@@ -88,7 +88,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex items-center justify-center border-t-[1px] border-[var(--border-color)] text-[var(--sec-text)] py-10 px-3'>Copyright &copy; | www.sudiplmc.dev - 2025 | All Right Reserved</div>
+                        <div className='flex items-center justify-center border-t-[1px] border-[var(--border-color)] text-[var(--sec-text)] py-10 px-3'>Copyright &copy; | www.sudip-lamichhane.com.np - 2025 | All Right Reserved</div>
                     </div>
                 </div>
             </footer>
