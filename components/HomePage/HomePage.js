@@ -126,7 +126,7 @@ const Home = () => {
           <h2 className='font-bold text-5xl'>About Me</h2>
           <p className='w-full lg:max-w-[400px] text-[1.1rem] text-[var(--sec-text)]'>A passionate web developer and designer dedicated to crafting seamless digital experiences. Combining creativity with technical expertise to build impactful solutions.</p>
           <div className='flex items-center gap-5'>
-            <LinkBtn link={"/about"} text={"Learn More"} isBlack={true} />
+            <LinkBtn link={"/about"} text={"More About Me"} isBlack={true} />
             <SocialMedias />
           </div>
         </div>
