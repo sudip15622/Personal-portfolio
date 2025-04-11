@@ -13,7 +13,7 @@ const ProjectCard = ({ details, projectNo }) => {
         >
             {/* Animated Picture */}
             <motion.picture
-                className='flex items-center justify-center w-full h-[450px] overflow-hidden opacity-70'
+                className='flex items-center justify-center w-full h-[300px] lg:h-[450px] overflow-hidden opacity-70'
                 initial={{ scale: 0.95 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.6, ease: "linear" }}
@@ -23,7 +23,7 @@ const ProjectCard = ({ details, projectNo }) => {
 
             {/* Animated Header */}
             <motion.div
-                className='flex items-center justify-between'
+                className='flex flex-col gap-x-8 gap-y-5 lg:flex-row lg:items-center lg:justify-between'
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
@@ -41,7 +41,7 @@ const ProjectCard = ({ details, projectNo }) => {
                     <h3 className='font-bold text-[2rem]'>{details.title.split("-")[0]}</h3>
                 </div>
                 <motion.p
-                    className='w-full max-w-[500px] text-[var(--sec-text)] text-[1.1rem]'
+                    className='w-full lg:max-w-[500px] text-[var(--sec-text)] text-[1.1rem]'
                     initial={{ opacity: 0, x: 60 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: 0.2 }}

@@ -53,7 +53,7 @@ const Home = () => {
 
   return (
     <main>
-      <motion.div className="flex items-center justify-between"
+      <motion.div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-x-10 gap-y-10"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -61,64 +61,40 @@ const Home = () => {
       >
         <div className='flex flex-col'>
           <div className='text-[1.1rem]'>Hey there,</div>
-          <h1 className='text-[3.5rem] flex justify-center flex-col font-bold'>
+          <h1 className='text-5xl flex font-bold'>
             I'm Sudip Lamichhane
           </h1>
           <div className='flex items-center gap-2 text-[var(--action-color)] my-3'>
             <span className="text-[1.2rem]"><LuArrowBigRightDash /></span>
             <p className="text-[1.3rem]">Web Developer | AI / ML Enthusiast</p>
           </div>
-          <p className="w-full max-w-[700px] text-[1.1rem] text-[var(--sec-text)] my-3">
+          <p className="w-full lg:max-w-[700px] text-[1.1rem] text-[var(--sec-text)] my-3">
             Hi, I'm Sudip, a Web Developer passionate about building dynamic, user-friendly websites. With expertise in React.js, Next.js, and Node.js, I create seamless digital experiences with clean code and intuitive design. Let’s bring ideas to life!
           </p>
           <div className='flex gap-10 items-center mt-8'>
             <LinkBtn link={"/contact"} text={"Get in touch"} />
-            <LinkBtn link={"/sudipCV.pdf"} text={"Download CV"} isBlack={true} download={true} />
+            {/* <LinkBtn link={"/sudipCV.pdf"} text={"Download CV"} isBlack={true} download={true} /> */}
           </div>
         </div>
 
-        <picture className='shadow-[0_0_30px_var(--action-color)] rounded-full flex items-center justify-center w-[420px] h-[420px] overflow-hidden'>
+        <picture className='lg:shadow-[0_0_30px_var(--action-color)] lg:rounded-full flex items-center justify-center w-[70%] mx-auto h-auto lg:w-[420px] lg:h-[420px] overflow-hidden'>
           <Image className='w-full h-full object-cover transition-all duration-[.4s] hover:scale-105' width={500} height={400} src="/sudip_main2.jpg" alt="portfolio-cover" />
         </picture>
-
-        {/* <ul className="flex flex-col justifly-center gap-7">
-          <li className='flex flex-col items-end'>
-            <div className='flex items-center gap-2'>
-              <span className='font-bold text-[3.5rem]'>2</span>
-              <span className='text-[var(--action-color)] text-[2rem]'><FaPlus /></span>
-            </div>
-            <p className='text-[var(--sec-text)] text-[1.1rem]'>Years of Experience</p>
-          </li>
-          <li className='flex flex-col items-end'>
-            <div className='flex items-center gap-2'>
-              <span className='font-bold text-[3.5rem]'>10</span>
-              <span className='text-[var(--action-color)] text-[2rem]'><FaPlus /></span>
-            </div>
-            <p className='text-[var(--sec-text)] text-[1.1rem]'>Completed Projects</p>
-          </li>
-          <li className='flex flex-col items-end'>
-            <div className='flex items-center gap-2'>
-              <span className='font-bold text-[3.5rem]'>5</span>
-              <span className='text-[var(--action-color)] text-[2rem]'><FaPlus /></span>
-            </div>
-            <p className='text-[var(--sec-text)] text-[1.1rem]'>Satisfied Clients</p>
-          </li>
-        </ul> */}
       </motion.div>
 
-      <section className="flex justify-between">
+      <section className="flex flex-col lg:flex-row justify-start lg:justify-between gap-x-10 gap-y-20">
         <motion.div className="flex flex-col gap-5"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className='font-bold text-[3.5rem]'>My Services</h2>
-          <p className='w-full max-w-[500px] text-[1.1rem] text-[var(--sec-text)]'>Offering expert web development and graphics solutions, from building dynamic websites to creating stunning visual designs. Let's bring your ideas to life!</p>
+          <h2 className='font-bold text-5xl'>My Services</h2>
+          <p className='w-full lg:max-w-[500px] text-[1.1rem] text-[var(--sec-text)]'>Offering expert web development and graphics solutions, from building dynamic websites to creating stunning visual designs. Let's bring your ideas to life!</p>
           <LinkBtn link={"/contact"} text={"Contact Me"} isBlack={true} />
         </motion.div>
 
-        <motion.ul className="w-full max-w-[550px]"
+        <motion.ul className="w-full lg:w-xl lg:max-w-[550px]"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -127,14 +103,14 @@ const Home = () => {
           {myServices.map((service, index) => {
             return (
               <React.Fragment key={index}>
-                <li className='flex items-center justify-center'>
-                  <Link href={"/portfolio"} className='flex justify-between w-full cursor-pointer duration-200 ease-linear transition-transform hover:translate-x-2 group'>
+                <li className='w-full flex items-center justify-center'>
+                  <Link href={"/portfolio"} className='relative flex justify-start lg:justify-between gap-x-5 lg:gap-x-2 w-full cursor-pointer duration-200 ease-linear transition-transform hover:translate-x-2 group'>
                     <div className="flex justify-center items-center w-fit h-fit text-[4rem] text-[var(--action-color)]">{service.icon}</div>
                     <div className="flex flex-col gap-2">
                       <h3 className='text-[1.6rem] font-bold group-hover:text-[var(--action-color)] transition-colors duration-200 ease-linear'>{service.title}</h3>
                       <p className='w-full max-w-[400px] text-[1.1rem] text-[var(--sec-text)]'>{service.description}</p>
                     </div>
-                    <div className="flex justify-center items-center text-[2rem] group-hover:text-[var(--action-color)] transition-colors duration-200 ease-linear"><FaArrowRight /></div>
+                    <div className="absolute top-1/2 right-0 lg:top-0 lg:relative flex justify-center items-center text-[2rem] group-hover:text-[var(--action-color)] transition-colors duration-200 ease-linear"><FaArrowRight /></div>
                   </Link>
                 </li>
 
@@ -145,24 +121,24 @@ const Home = () => {
         </motion.ul>
       </section>
 
-      <section className="relative flex justify-between items-start">
+      <section className="lg:relative flex flex-col lg:flex-row justify-start lg:justify-between items-start">
         <div className="flex flex-col gap-5">
-          <h2 className='font-bold text-[3.5rem]'>About Me</h2>
-          <p className='w-full max-w-[400px] text-[1.1rem] text-[var(--sec-text)]'>A passionate web developer and designer dedicated to crafting seamless digital experiences. Combining creativity with technical expertise to build impactful solutions.</p>
+          <h2 className='font-bold text-5xl'>About Me</h2>
+          <p className='w-full lg:max-w-[400px] text-[1.1rem] text-[var(--sec-text)]'>A passionate web developer and designer dedicated to crafting seamless digital experiences. Combining creativity with technical expertise to build impactful solutions.</p>
           <div className='flex items-center gap-5'>
             <LinkBtn link={"/about"} text={"Learn More"} isBlack={true} />
             <SocialMedias />
           </div>
         </div>
 
-        <picture className='absolute flex items-center justify-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-40%] -z-10 w-[400px] h-auto overflow-hidden opacity-75'>
+        <picture className='lg:absolute mx-auto flex items-center justify-center lg:top-1/2 lg:left-1/2 lg:translate-x-[-50%] lg:translate-y-[-40%] -z-10 w-[60%] lg:w-[400px] h-auto overflow-hidden opacity-75'>
           <Image className='w-full h-full object-cover' width={500} height={400} src="/sudip_main.jpg" alt="portfolio-about-cover" />
         </picture>
 
-        <div className='flex flex-col gap-4 max-w-[400px] mt-[80px]'>
+        <div className='flex flex-col gap-4 w-full lg:max-w-[400px] lg:mt-[80px]'>
           <h3 className='text-[1.6rem] font-bold'>Companies I worked for</h3>
           <p className='text-[1.1rem] text-[var(--sec-text)]'>I've had the opportunity to work with these companies and clients, delivering quality solutions.</p>
-          <div className='w-full h-[1px] bg-[var(--border-color)] my-3'></div>
+          <div className='w-full h-[1px] bg-[var(--border-color)] lg:my-3'></div>
           <motion.div className="flex items-center gap-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -207,11 +183,11 @@ const Home = () => {
           transition={{ duration: .6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className='font-bold text-[3.5rem]'>My Latest Work</h2>
+          <h2 className='font-bold text-5xl'>My Latest Work</h2>
           <LinkBtn link={"/portfolio"} text={"Browse portfolio"} />
         </motion.div>
         {myProjects.length > 0 && <>
-          <motion.div className='relative flex w-full p-10 bg-[var(--bg-sec-color)] rounded-[5px]'
+          <motion.div className='relative flex w-full p-5 lg:p-10 bg-[var(--bg-sec-color)] rounded-[5px]'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: .6, ease: "easeOut" }}
