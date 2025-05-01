@@ -1,16 +1,16 @@
 "use client"
 import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import emailjs from '@emailjs/browser';
 import { motion, AnimatePresence } from 'framer-motion';
 import SocialMedias from '../SocialMedias/SocialMedias'
+import { sendEmail } from '@/actions/sendEmail';
 
 import { PulseLoader } from 'react-spinners';
 import { FaAngleDown } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 
-const InfoBox = ({ success, handleOkClick }) => {
+const InfoBox = ({ success, handleOkClick, message = "" }) => {
     return (
         <motion.div
             className='fixed flex items-center justify-center top-0 left-0 right-0 bottom-0 backdrop-blur-sm z-[5000]'
@@ -27,7 +27,7 @@ const InfoBox = ({ success, handleOkClick }) => {
                 exit={{ opacity: 0, scale: 0.5 }}
             >
                 <div className='text-[7rem]'>{success ? <FaCheckCircle /> : <MdCancel />}</div>
-                <h2 className='text-[2rem] font-bold'>{success ? "Successfully sent message!" : "Something went wrong!"}</h2>
+                <h2 className='text-[2rem] font-bold'>{success ? "Successfully sent message!" : message !== "" ? message : "Something went wrong!"}</h2>
                 <button
                     onClick={(e) => {
                         handleOkClick();
@@ -45,6 +45,7 @@ const InfoBox = ({ success, handleOkClick }) => {
 const ContactPage = () => {
     const [loading, setLoading] = useState(false)
     const [showInfoBox, setShowInfoBox] = useState(null)
+    const [errorMessage, setErrorMessage]= useState("");
     const [faqs, setFaqs] = useState([
         {
             question: "What services do you offer?",
@@ -84,28 +85,34 @@ const ContactPage = () => {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+    } = useForm({
+        mode: "onChange",
+        reValidateMode: "onSubmit",
+        defaultValues: {
+            name: "",
+            email: "",
+            mobileNumber: "",
+            subject: "",
+            message: "",
+        }
+    });
 
     const onSubmit = async (data) => {
+        if(loading) {
+            return;
+        }
         setLoading(true);
 
-        const templateParams = {
-            from_name: data.name,
-            from_email: data.email,
-            from_mobile: data.mobileNumber,
-            subject: data.subject,
-            message: data.message,
-        };
-
         try {
-            await emailjs.send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-                templateParams,
-                {
-                    publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-                }
-            );
+            const result = await sendEmail(data);
+            if(result.error){
+                setShowInfoBox("failure")
+                setErrorMessage(result.error)
+            }
+            if(result.apiError){
+                setShowInfoBox("failure")
+                setErrorMessage(result.apiError)
+            }
             setShowInfoBox("success");
             formRef.current.reset();
         } catch (error) {
@@ -147,9 +154,9 @@ const ContactPage = () => {
             <AnimatePresence>
                 {showInfoBox ? (
                     showInfoBox === "success" ? (
-                        <InfoBox success={true} handleOkClick={handleOkClick} />
+                        <InfoBox success={true} handleOkClick={handleOkClick}/>
                     ) : (
-                        <InfoBox success={false} handleOkClick={handleOkClick} />
+                        <InfoBox success={false} handleOkClick={handleOkClick} message={errorMessage}/>
                     )
                 ) : null}
             </AnimatePresence>
@@ -252,7 +259,7 @@ const ContactPage = () => {
                         </div>
                     </div>
                     <div className='flex items-center gap-5'>
-                        <button type="submit" className="flex items-center justify-center outline-none bg-[var(--action-color)] text-[1.1rem] font-bold rounded-[5px] w-[200px] h-[60px] transition-all duration-100 ease-linear hover:bg-[var(--bg-color)] hover:border-2 hover:border-[var(--border-color)] hover:scale-y-105 origin-bottom">{loading ? <PulseLoader color='var(--action-color)' /> : "Send message"}</button>
+                        <button disabled={loading} type="submit" className="flex items-center justify-center outline-none bg-[var(--action-color)] text-[1.1rem] font-bold rounded-[5px] w-[200px] h-[60px] transition-all duration-100 ease-linear hover:bg-[var(--bg-color)] hover:border-2 hover:border-[var(--border-color)] hover:scale-y-105 origin-bottom">{loading ? <PulseLoader color='var(--action-color)' /> : "Send message"}</button>
                         <SocialMedias />
                     </div>
                 </form>
