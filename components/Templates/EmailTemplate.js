@@ -20,7 +20,7 @@ export const EmailTemplate = ({ name, message, email, mobileNumber }) => (
             <img
                 src="https://i.ibb.co/PZj5wW2j/sudip.jpg"
                 alt="Sudip"
-                style={{ width: '100px', height: 'auto', borderRadius: '50%' }}
+                style={{ width: '80px', height: 'auto', borderRadius: '50%' }}
             />
         </div>
         <h1 style={{

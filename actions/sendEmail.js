@@ -49,12 +49,12 @@ export async function sendEmail(details) {
         }
         const { data, error } = await resend.emails.send({
             from: 'Sudip Lamichhane <contact@sudip-lamichhane.com.np>',
-            to: ['sudeeplamichhane18@gmail.com'],
+            to: [process.env.MY_EMAIL],
             subject: details.subject,
             react: EmailTemplate(templateParams),
         });
 
-        console.log("Resend response:", { data, error });
+        // console.log("Resend response:", { data, error });
 
         if (error) {
             return {
