@@ -12,10 +12,10 @@ const SocialMedias = ({ hoverBlack = false }) => {
             link: "https://www.facebook.com/sudiplmc.dev",
             icon: <FaFacebookF />,
         },
-        {
-            link: "https://www.instagram.com/sudiplmc.dev",
-            icon: <RiInstagramFill />,
-        },
+        // {
+        //     link: "https://www.instagram.com/sudiplmc.dev",
+        //     icon: <RiInstagramFill />,
+        // },
         {
             link: "https://github.com/sudip15622",
             icon: <FaGithub />,

@@ -1,15 +1,19 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import SocialMedias from '../SocialMedias/SocialMedias';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { TbCircleLetterSFilled, TbCircleDottedLetterS } from "react-icons/tb";
+import { IoMenu } from "react-icons/io5";
 
 
 const Navbar = () => {
 
     const currentPath = usePathname();
+    
+    const [showPages, setShowPages] = useState(false);
+
 
     const navbarPages = [
         {
@@ -27,9 +31,9 @@ const Navbar = () => {
     ]
 
     return (
-        <header className='flex items-center justify-center w-full sticky top-0 z-[1000] bg-[var(--bg-color)]'>
+        <header className='flex items-center justify-center w-full sticky top-0 z-[1001] bg-[var(--bg-color)]'>
             <nav className='flex items-center justify-between w-full max-w-[1250px] py-5 mx-[30px]'>
-                <ul className='flex items-center gap-10'>
+                <ul className='hidden md:flex items-center gap-10'>
                     {navbarPages.map((navPage, index) => {
                         return (
                             <li key={index} className={`text-[1.1rem] hover:text-[var(--action-color)] transition-colors duration-200 ease-linear`}>
@@ -40,6 +44,9 @@ const Navbar = () => {
                         )
                     })}
                 </ul>
+                <button onClick={() => setShowPages(!showPages)} className='flex md:hidden items-center justify-center p-2 text-3xl'>
+                    < IoMenu />
+                </button>
 
                 <div className='flex items-center justify-center text-6xl text-[var(--action-color)]'>
                     <TbCircleDottedLetterS />

@@ -28,16 +28,18 @@ const ProjectCard = ({ details, projectNo }) => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
             >
-                <div className='flex items-center gap-4'>
-                    <motion.div
-                        className='flex items-center justify-center text-4xl text-[var(--action-color)]'
-                        initial={{ scale: 0.5, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 0.4, delay: 0.2 }}
-                    >
-                        <TbCircleDottedLetterS />
-                    </motion.div>
-                    <div className='font-bold text-[2.8rem]'>{projectNo < 10 ? `0${projectNo}` : `${projectNo}`}</div>
+                <div className='flex sm:items-center gap-x-4 gap-y-1 flex-col sm:flex-row'>
+                    <div className='flex flex-row gap-x-4'>
+                        <motion.div
+                            className='flex items-center justify-center text-4xl text-[var(--action-color)]'
+                            initial={{ scale: 0.5, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.4, delay: 0.2 }}
+                        >
+                            <TbCircleDottedLetterS />
+                        </motion.div>
+                        <div className='font-bold text-[2.8rem]'>{projectNo < 10 ? `0${projectNo}` : `${projectNo}`}</div>
+                    </div>
                     <h3 className='font-bold text-[2rem]'>{details.title.split("-")[0]}</h3>
                 </div>
                 <motion.p
