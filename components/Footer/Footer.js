@@ -53,15 +53,15 @@ const Footer = () => {
                             <span className='text-[1.5rem] font-bold'>Sudip Lmc</span>
                         </div>
                         <p className='w-full lg:max-w-[300px] text-[var(--sec-text)]'>Hey there, you can also reach me through my social media&apos;s accounts.</p>
-                        <div className='flex lg:flex-col xl:flex-row xl:items-center gap-5'>
+                        <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row xl:items-center gap-5'>
                             <LinkBtn link={"/contact"} text={"Get in touch"} isBlack={true}/>
                             <SocialMedias />
                         </div>
                     </div>
                     <div className='flex flex-col flex-2'>
-                        <div className='flex justify-between lg:pl-20 mt-20 pb-10'>
+                        <div className='flex flex-col gap-y-7 sm:flex-row justify-between lg:pl-20 mt-10 lg:mt-20 pb-10'>
                             <div className='flex flex-col flex-1 justify-start gap-4'>
-                                <h4 className='font-bold text-[1.2rem]'>Contact Me</h4>
+                                <h4 className='font-bold text-[1.2rem] border-b-2 sm:border-b-0 border-[var(--border-color)] w-fit'>Contact Me</h4>
                                 <ul className='flex flex-col gap-3'>
                                     <li className='flex flex-col gap-1'>
                                         <h5 className='font-bold'>Email:</h5>
@@ -79,7 +79,7 @@ const Footer = () => {
                             </div>
 
                             <div className='flex flex-col flex-1 gap-4'>
-                                <h4 className='font-bold text-[1.2rem]'>Menu</h4>
+                                <h4 className='font-bold text-[1.2rem] border-b-2 sm:border-b-0 border-[var(--border-color)] w-fit'>Menu</h4>
                                 <div className='flex flex-wrap gap-x-20 gap-y-3'>
                                     <Link className='text-[var(--sec-text)] hover:scale-105 hover:text-[var(--action-color)] transition-all duration-200 ease-linear' href="/">Home</Link>
                                     <Link className='text-[var(--sec-text)] hover:scale-105 hover:text-[var(--action-color)] transition-all duration-200 ease-linear' href="/about">About</Link>
@@ -88,7 +88,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex items-center justify-center border-t-[1px] border-[var(--border-color)] text-[var(--sec-text)] py-10 px-3'>Copyright &copy; | www.sudip-lamichhane.com.np - 2025 | All Right Reserved</div>
+                        <div className='flex text-center items-center justify-center border-t-[1px] border-[var(--border-color)] text-[var(--sec-text)] py-10 px-3'>Copyright &copy; | www.sudip-lamichhane.com.np - 2025 | All Right Reserved</div>
                     </div>
                 </div>
             </footer>
