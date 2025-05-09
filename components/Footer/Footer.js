@@ -23,7 +23,7 @@ const Contactbox = () => {
                         <span>Let&apos;s get in touch</span>
                     </h2>
                     <p className='w-full lg:max-w-[600px] text-[1.1rem] text-[var(--sec-text)]'>Ready to bring your ideas to life? Let's collaborate and create something amazing together. Whether it's web development, design, or innovative solutions, I'm here to help. Get in touch today!</p>
-                    <div className='flex items-center gap-5'>
+                    <div className='flex flex-col sm:flex-row sm:items-center gap-5'>
                         <LinkBtn link={"/contact"} text={"Get in touch"} isWhite={true} />
                         <SocialMedias hoverBlack={true} />
                     </div>
@@ -80,7 +80,7 @@ const Footer = () => {
 
                             <div className='flex flex-col flex-1 gap-4'>
                                 <h4 className='font-bold text-[1.2rem] border-b-2 sm:border-b-0 border-[var(--border-color)] w-fit'>Menu</h4>
-                                <div className='flex flex-wrap gap-x-20 gap-y-3'>
+                                <div className='grid grid-cols-2 gap-x-20 gap-y-3'>
                                     <Link className='text-[var(--sec-text)] hover:scale-105 hover:text-[var(--action-color)] transition-all duration-200 ease-linear' href="/">Home</Link>
                                     <Link className='text-[var(--sec-text)] hover:scale-105 hover:text-[var(--action-color)] transition-all duration-200 ease-linear' href="/about">About</Link>
                                     <Link className='text-[var(--sec-text)] hover:scale-105 hover:text-[var(--action-color)] transition-all duration-200 ease-linear' href="/portfolio">Portfolio</Link>

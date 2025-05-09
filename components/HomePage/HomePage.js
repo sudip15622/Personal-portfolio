@@ -53,7 +53,7 @@ const Home = () => {
 
   return (
     <main>
-      <motion.div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-x-10 gap-y-10"
+      <motion.div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-x-10 gap-y-20"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -73,7 +73,6 @@ const Home = () => {
           </p>
           <div className='flex gap-10 items-center mt-8'>
             <LinkBtn link={"/contact"} text={"Get in touch"} />
-            {/* <LinkBtn link={"/sudipCV.pdf"} text={"Download CV"} isBlack={true} download={true} /> */}
           </div>
         </div>
 
