@@ -16,7 +16,7 @@ const ProjectCard = ({ details }) => {
             <picture className='relative w-full h-[300px] flex items-center justify-center overflow-hidden opacity-70'>
                 <Image fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className='w-full h-full object-cover grayscale transition-all duration-[.4s] group-hover:scale-105 group-hover:grayscale-0' src={details.bannerImage} alt={details.title} />
             </picture>
-            <div className='flex flex-col gap-5 w-full pt-4 px-4 pb-10'>
+            <div className='flex flex-col gap-5 w-full pt-4 px-2 sm:px-4 pb-10'>
                 <div className='flex items-center justify-between group-hover:text-[var(--action-color)] transition-colors duration-[.4s]'>
                     <h2 className='font-bold text-[1.3rem]'>{details.title}</h2>
                     <div className='flex items-center justify-center p-1 text-[2rem]'><FaArrowRight /></div>
@@ -82,7 +82,7 @@ const PortfolioPage = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.2 }}
             >
-                <h1 className='text-5xl font-bold'>
+                <h1 className='sm:text-5xl text-4xl font-bold'>
                     Projects I&apos;ve Built
                 </h1>
                 <p className='w-full max-w-[700px] text-[1.1rem] text-[var(--sec-text)]'>

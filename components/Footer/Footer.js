@@ -18,7 +18,7 @@ const Contactbox = () => {
         >
             <div className='w-full max-w-[1250px] flex flex-col lg:flex-row lg:items-center lg:justify-between'>
                 <div className="flex flex-col gap-5">
-                    <h2 className='font-bold text-5xl flex flex-col'>
+                    <h2 className='font-bold sm:text-5xl text-4xl flex flex-col'>
                         <span>Have an Idea?</span>
                         <span>Let&apos;s get in touch</span>
                     </h2>

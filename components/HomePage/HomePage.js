@@ -61,7 +61,7 @@ const Home = () => {
       >
         <div className='flex flex-col'>
           <div className='text-[1.1rem] mb-1'>Hey there,</div>
-          <h1 className='text-5xl flex font-bold mb-1'>
+          <h1 className='sm:text-5xl text-4xl flex font-bold mb-1'>
             I'm Sudip Lamichhane
           </h1>
           <div className='flex items-center gap-x-2 text-[var(--action-color)] my-4'>
@@ -88,7 +88,7 @@ const Home = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className='font-bold text-5xl'>My Services</h2>
+          <h2 className='font-bold sm:text-5xl text-4xl'>My Services</h2>
           <p className='w-full lg:max-w-[500px] text-[1.1rem] text-[var(--sec-text)]'>Offering expert web development and graphics solutions, from building dynamic websites to creating stunning visual designs. Let's bring your ideas to life!</p>
           <LinkBtn link={"/contact"} text={"Contact Me"} isBlack={true} />
         </motion.div>
@@ -122,7 +122,7 @@ const Home = () => {
 
       <section className="lg:relative flex flex-col lg:flex-row justify-start lg:justify-between items-start">
         <div className="flex flex-col gap-5">
-          <h2 className='font-bold text-5xl'>About Me</h2>
+          <h2 className='font-bold sm:text-5xl text-4xl'>About Me</h2>
           <p className='w-full lg:max-w-[400px] text-[1.1rem] text-[var(--sec-text)]'>A passionate web developer and designer dedicated to crafting seamless digital experiences. Combining creativity with technical expertise to build impactful solutions.</p>
           <div className='flex flex-col gap-y-5 sm:flex-row sm:items-center gap-5'>
             <LinkBtn link={"/about"} text={"More About Me"} isBlack={true} />
@@ -182,7 +182,7 @@ const Home = () => {
           transition={{ duration: .6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className='font-bold text-5xl'>My Latest Work</h2>
+          <h2 className='font-bold sm:text-5xl text-4xl'>My Latest Work</h2>
           <LinkBtn link={"/portfolio"} text={"Browse portfolio"} />
         </motion.div>
         {myProjects.length > 0 && <>

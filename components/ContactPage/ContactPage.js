@@ -45,7 +45,7 @@ const InfoBox = ({ success, handleOkClick, message = "" }) => {
 const ContactPage = () => {
     const [loading, setLoading] = useState(false)
     const [showInfoBox, setShowInfoBox] = useState(null)
-    const [errorMessage, setErrorMessage]= useState("");
+    const [errorMessage, setErrorMessage] = useState("");
     const [faqs, setFaqs] = useState([
         {
             question: "What services do you offer?",
@@ -63,7 +63,7 @@ const ContactPage = () => {
             show: false
         },
         {
-            question: "Can you build a website for my business?",
+            question: "Can you build a website for me?",
             answer: "Absolutely! I can design and develop a custom website tailored to your needs, whether it's a portfolio, e-commerce store, or web app. Let's discuss your requirements!",
             show: false
         },
@@ -98,18 +98,18 @@ const ContactPage = () => {
     });
 
     const onSubmit = async (data) => {
-        if(loading) {
+        if (loading) {
             return;
         }
         setLoading(true);
 
         try {
             const result = await sendEmail(data);
-            if(result.error){
+            if (result.error) {
                 setShowInfoBox("failure")
                 setErrorMessage(result.error)
             }
-            if(result.apiError){
+            if (result.apiError) {
                 setShowInfoBox("failure")
                 setErrorMessage(result.apiError)
             }
@@ -154,9 +154,9 @@ const ContactPage = () => {
             <AnimatePresence>
                 {showInfoBox ? (
                     showInfoBox === "success" ? (
-                        <InfoBox success={true} handleOkClick={handleOkClick}/>
+                        <InfoBox success={true} handleOkClick={handleOkClick} />
                     ) : (
-                        <InfoBox success={false} handleOkClick={handleOkClick} message={errorMessage}/>
+                        <InfoBox success={false} handleOkClick={handleOkClick} message={errorMessage} />
                     )
                 ) : null}
             </AnimatePresence>
@@ -167,14 +167,14 @@ const ContactPage = () => {
                 viewport={{ once: true, amount: 0.2 }}
             >
                 <div className='flex flex-col gap-y-2 text-center items-center justify-center'>
-                    <h1 className='font-bold text-[3.5rem]'>Get In Touch</h1>
+                    <h1 className='font-bold sm:text-5xl text-4xl'>Get In Touch</h1>
                     <p className='w-full max-w-[500px] text-[1.1rem] text-[var(--sec-text)]'>
                         To work with me, fill up the details below and send messages or contact me on social media platforms.
                     </p>
                 </div>
                 <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className='w-full max-w-[800px] mx-auto flex flex-col'>
                     <div className='flex flex-wrap justify-between'>
-                        <div className='flex flex-col mb-20 w-full max-w-[375px]'>
+                        <div className='flex flex-col mb-20 w-full md:max-w-[340px] lg:max-w-[375px]'>
                             <input
                                 type='text'
                                 className='w-full py-3 text-[1.1rem] text-[var(--pri-text)] bg-inherit border-b-2 border-[var(--border-color)] outline-none hover:border-[var(--action-color)] focus:border-[var(--action-color)] transition-colors duration-200'
@@ -188,7 +188,7 @@ const ContactPage = () => {
                             />
                             {errors.name && <span id='name-error' className="mt-2 text-[.85rem] text-[var(--action-color)]">{errors.name.message}</span>}
                         </div>
-                        <div className='flex flex-col mb-20 w-full max-w-[375px]'>
+                        <div className='flex flex-col mb-20 w-full md:max-w-[340px] lg:max-w-[375px]'>
                             <input
                                 type='email'
                                 className='w-full py-3 text-[1.1rem] text-[var(--pri-text)] bg-inherit border-b-2 border-[var(--border-color)] outline-none hover:border-[var(--action-color)] focus:border-[var(--action-color)] transition-colors duration-200'
@@ -202,7 +202,7 @@ const ContactPage = () => {
                             />
                             {errors.email && <span id='email-error' className="mt-2 text-[.85rem] text-[var(--action-color)]">{errors.email.message}</span>}
                         </div>
-                        <div className='flex flex-col mb-20 w-full max-w-[375px]'>
+                        <div className='flex flex-col mb-20 w-full md:max-w-[340px] lg:max-w-[375px]'>
                             <input
                                 type='tel'
                                 className='w-full py-3 text-[1.1rem] text-[var(--pri-text)] bg-inherit border-b-2 border-[var(--border-color)] outline-none hover:border-[var(--action-color)] focus:border-[var(--action-color)] transition-colors duration-200'
@@ -216,7 +216,7 @@ const ContactPage = () => {
                             />
                             {errors.mobileNumber && <span id='mobileNumber-error' className="mt-2 text-[.85rem] text-[var(--action-color)]">{errors.mobileNumber.message}</span>}
                         </div>
-                        <div className='flex flex-col mb-20 w-full max-w-[375px]'>
+                        <div className='flex flex-col mb-20 w-full md:max-w-[340px] lg:max-w-[375px]'>
                             <input
                                 type='text'
                                 className='w-full py-3 text-[1.1rem] text-[var(--pri-text)] bg-inherit border-b-2 border-[var(--border-color)] outline-none hover:border-[var(--action-color)] focus:border-[var(--action-color)] transition-colors duration-200'
@@ -258,16 +258,17 @@ const ContactPage = () => {
                             )}
                         </div>
                     </div>
-                    <div className='flex items-center gap-5'>
+                    <div className='flex flex-col sm:flex-row sm:items-center gap-5'>
                         <button disabled={loading} type="submit" className="flex items-center justify-center outline-none bg-[var(--action-color)] text-[1.1rem] font-bold rounded-[5px] w-[200px] h-[60px] transition-all duration-100 ease-linear hover:bg-[var(--bg-color)] hover:border-2 hover:border-[var(--border-color)] hover:scale-y-105 origin-bottom">{loading ? <PulseLoader color='var(--action-color)' /> : "Send message"}</button>
                         <SocialMedias />
                     </div>
                 </form>
             </motion.section>
             <section className='flex flex-col gap-[100px]'>
-                <h1 className='mx-auto font-bold text-[3.5rem] text-center w-full max-w-[500px]'>Frequently Asked Questions</h1>
-                <div className='flex w-full justify-between'>
-                    <motion.ul className="flex flex-col gap-y-10 w-full max-w-[570px]"
+                <h1 className='hidden sm:block mx-auto font-bold sm:text-5xl text-4xl text-center w-full xl:max-w-[500px]'>Frequently Asked Questions</h1>
+                <h1 className='sm:hidden mx-auto font-bold sm:text-5xl text-4xl text-center w-full xl:max-w-[500px]'>FAQs</h1>
+                <div className='flex w-full flex-col items-center xl:items-start xl:flex-row xl:justify-between gap-x-10 gap-y-10'>
+                    <motion.ul className="flex flex-col gap-y-10 w-full md:max-w-[900px] xl:max-w-[570px]"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -277,14 +278,13 @@ const ContactPage = () => {
                             faqs.map((item, index) => (
                                 index < 3 && <li
                                     key={index}
-                                    className={`w-full max-w-[570px] flex flex-col gap-y-5 overflow-hidden border-b-[1px] border-[var(--border-color)] pb-8 transition-all duration-400 ease-out ${item.show ? "max-h-[160px]" : "max-h-[60px]"
-                                        }`}
+                                    className={`w-full flex flex-col sm:gap-y-5 gap-y-10 overflow-hidden border-b-[1px] border-[var(--border-color)] pb-8 transition-all duration-400 ease-out ${item.show ? "sm:max-h-[160px] max-h-[270px]" : "sm:max-h-[60px] max-h-[80px]"}`}
                                 >
                                     <div
                                         className="flex items-center justify-between cursor-pointer"
                                         onClick={() => handleFaq(index)}
                                     >
-                                        <h2 className="font-bold text-[1.5rem]">{item.question}</h2>
+                                        <h2 className="font-bold text-[1.4rem]">{item.question}</h2>
                                         <motion.div className="flex items-center justify-center text-[1.5rem]"
                                             initial={{ rotate: 0 }}
                                             animate={{ rotate: item.show ? 180 : 0 }}
@@ -297,7 +297,7 @@ const ContactPage = () => {
                                 </li>
                             ))}
                     </motion.ul>
-                    <motion.ul className="flex flex-col gap-y-10 w-full max-w-[570px]"
+                    <motion.ul className="flex flex-col gap-y-10 w-full md:max-w-[900px] xl:max-w-[570px]"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -307,11 +307,10 @@ const ContactPage = () => {
                             faqs.map((item, index) => (
                                 index > 2 && <li
                                     key={index}
-                                    className={`w-full flex flex-col gap-y-5 overflow-hidden border-b-[1px] border-[var(--border-color)] pb-8 transition-all duration-400 ease-out ${item.show ? "max-h-[160px]" : "max-h-[60px]"
-                                        }`}
+                                    className={`w-full flex flex-col sm:gap-y-5 gap-y-10 overflow-hidden border-b-[1px] border-[var(--border-color)] pb-8 transition-all duration-400 ease-out ${item.show ? "sm:max-h-[160px] max-h-[270px]" : "sm:max-h-[60px] max-h-[80px]"}`}
                                 >
                                     <div
-                                        className="flex items-center justify-between cursor-pointer"
+                                        className="flex items-center justify-between gap-x-2 cursor-pointer"
                                         onClick={() => handleFaq(index)}
                                     >
                                         <h2 className="font-bold text-[1.5rem]">{item.question}</h2>

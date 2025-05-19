@@ -110,13 +110,13 @@ const AboutPage = () => {
         <picture className='order-2 lg:order-1 flex items-center justify-center w-full sm:w-[420px] h-auto sm:h-[420px] overflow-hidden opacity-80'>
           <Image width={500} height={400} className='w-full h-full object-cover' src="/sudip_main.jpg" alt="portfolio-about-cover" />
         </picture>
-        <motion.div className='flex flex-col w-full lg:w-fit order-1 lg:order-2'
+        <motion.div className='flex flex-col gap-y-1 w-full lg:w-fit order-1 lg:order-2'
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h1 className='text-5xl font-bold mb-2'>
+          <h1 className='sm:text-5xl text-4xl font-bold mb-2'>
             I'm Sudip Lamichhane
           </h1>
           <p className="text-[1.5rem]">A proficient web developer & AI/ML enthusiast</p>
@@ -131,7 +131,7 @@ const AboutPage = () => {
 
       <section className="relative flex lg:flex-row flex-col gap-x-10 gap-y-10 justify-between items-start lg:mt-0 mt-[-100px]">
         <div className="flex flex-col gap-5">
-          <h2 className='font-bold text-5xl'>My Skills</h2>
+          <h2 className='font-bold sm:text-5xl text-4xl'>My Skills</h2>
           <p className='w-full lg:max-w-[500px] text-[1.1rem] text-[var(--sec-text)]'>I have honed my skills across multiple domains, from building dynamic web applications to exploring AI/ML and creative design. Here are the key areas I specialize in:</p>
           <motion.ul className="w-full lg:max-w-[500px] flex flex-col mt-3"
             initial={{ opacity: 0, x: -50 }}
@@ -179,7 +179,7 @@ const AboutPage = () => {
       </section>
 
       <section className="relative container mx-auto">
-        <h1 className="text-5xl font-bold text-center mb-12">My Journey & Experiences</h1>
+        <h1 className="sm:text-5xl text-4xl font-bold text-center mb-12">My Journey & Experiences</h1>
         <div className="relative mx-auto w-full">
           {/* Vertical Line */}
           <div className="absolute left-1/2 transform -translate-x-1 bg-[var(--border-color)] w-1 h-full hidden sm:block"></div>
