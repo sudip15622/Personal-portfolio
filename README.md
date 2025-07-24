@@ -179,8 +179,7 @@ While this is a personal portfolio, suggestions and feedback are welcome! Feel f
 ## 📞 Contact
 
 - **Website**: [sudip-lamichhane.com.np](https://sudip-lamichhane.com.np)
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/sudip-lamichhane-a22613271/)
 - **GitHub**: [@sudip15622](https://github.com/sudip15622)
 
 ---
