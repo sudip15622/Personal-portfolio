@@ -149,8 +149,8 @@ const Home = () => {
                 className="w-full h-full object-cover filter grayscale"
                 width={200}
                 height={150}
-                src="/google.webp"
-                alt="google-logo"
+                src="/fiverr_logo.png"
+                alt="fiverr-logo"
               />
             </picture>
             <picture className="flex items-center justify-center w-[70px] h-auto overflow-hidden">
@@ -158,8 +158,8 @@ const Home = () => {
                 className="w-full h-full object-cover filter grayscale"
                 width={200}
                 height={150}
-                src="/microsoft.png"
-                alt="microsoft-logo"
+                src="/upwork_logo.png"
+                alt="upwork-logo"
               />
             </picture>
             <picture className="flex items-center justify-center w-[70px] h-auto overflow-hidden">
@@ -167,8 +167,8 @@ const Home = () => {
                 className="w-full h-full object-cover filter grayscale brightness-75"
                 width={200}
                 height={150}
-                src="/apple.png"
-                alt="apple-logo"
+                src="/shayata_logo.png"
+                alt="shayata-logo"
               />
             </picture>
           </motion.div>

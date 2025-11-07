@@ -9,7 +9,7 @@ const SocialMedias = ({ hoverBlack = false }) => {
 
     const mediaInfos = [
         {
-            link: "https://www.facebook.com/sudiplmc.dev",
+            link: "https://www.facebook.com/sudiplc.dev",
             icon: <FaFacebookF />,
         },
         // {
@@ -21,7 +21,7 @@ const SocialMedias = ({ hoverBlack = false }) => {
             icon: <FaGithub />,
         },
         {
-            link: "https://www.linkedin.com/in/sudip-lamichhane-a22613271/",
+            link: "https://www.linkedin.com/in/sudip15622/",
             icon: <FaLinkedin />,
         },
     ]
