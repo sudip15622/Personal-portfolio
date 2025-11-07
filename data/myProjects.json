@@ -1,154 +1,230 @@
 [
-    {
-        "id": "project-i-fundnepal",
-        "title": "Fund Nepal - Crowd funding Platform",
-        "baseLink": "projects/project-i-fundnepal",
-        "category": "Web development",
-        "description": "It's an crowdfunding platform where people can raise a fundraiser campaign as well donate to various fundraiser. Ensuring good interaction between people with a best supporting experience.",
-        "bannerImage": "/fundnepal.png",
-        "featureImage": "/fundnepal_feature.png",
-        "aboutImage": "/fundnepal_about.png",
-        "overview": {
-            "date": "Aug 20, 2024",
-            "type": "College project",
-            "service": "Web development",
-            "client": "No One"
-        },
-        "features": [
-            {
-                "title": "User Authentication",
-                "description": "Secure login with NextAuth."
-            },
-            {
-                "title": "Fundraiser Creation",
-                "description": "Users can start a fundraiser with images, descriptions, and bank details."
-            },
-            {
-                "title": "Donation System",
-                "description": "Payments via eSewa and Khalti."
-            },
-            {
-                "title": "Admin Approval System",
-                "description": "Fundraisers require admin verification before going live."
-            },
-            {
-                "title": "Reporting System",
-                "description": "Users can report fraudulent fundraisers."
-            }
-        ],
-        "technologies": [
-            "Next",
-            "CSS",
-            "Prisma",
-            "MongoDb",
-            "Git",
-            "Netlify",
-            "Postman",
-            "Resend"
-        ],
-        "challenges": [
-            {
-                "challenge": "Integrating nepali payment gateways.",
-                "solution": "Used documentation of related gateways to implement payment system."
-            }
-        ],
-        "gallery": [
-            "/fundnepal.png",
-            "/fundnepal1.png",
-            "/fundnepal2.png",
-            "/fundnepal_about.png"
-        ],
-        "liveDemo": "https://fundnepal.netlify.app",
-        "githubRepo": "https://github.com/sudip15622/fundnepal",
-        "role": "Full-stack developer",
-        "contributions": [
-            "Designed the frontend",
-            "Implemented the backend API and authentication",
-            "Integrated the payment gateway"
-        ],
-        "lessonsLearned": [
-            "How to integrate third-party APIs",
-            "Managing state in large React applications",
-            "Optimizing database queries",
-            "Adding payment gateways in web applications"
-        ]
+  {
+    "id": "project-i-fundnepal",
+    "title": "Fund Nepal - Crowd funding Platform",
+    "baseLink": "projects/project-i-fundnepal",
+    "category": "Web development",
+    "description": "It's an crowdfunding platform where people can raise a fundraiser campaign as well donate to various fundraiser. Ensuring good interaction between people with a best supporting experience.",
+    "bannerImage": "/fundnepal.png",
+    "featureImage": "/fundnepal_feature.png",
+    "aboutImage": "/fundnepal_about.png",
+    "overview": {
+      "date": "Aug 20, 2024",
+      "type": "College project",
+      "service": "Web development",
+      "client": "No One"
     },
-    {
-        "id": "project-ii-shayata",
-        "title": "Shayata - Expert Home Fixes",
-        "baseLink": "projects/project-ii-shayata",
-        "category": "Web development",
-        "description": "Shayata is a platform that connects users with expert home repair professionals. Users can easily request home fixes, and the Shayata team delivers the services. The platform offers smooth user interaction and an easy-to-use admin dashboard.",
-        "bannerImage": "/shayata.png",
-        "featureImage": "/shayata_feature.png",
-        "aboutImage": "/shayata_about.png",
-        "overview": {
-            "date": "July 10, 2023",
-            "type": "Collaborative project",
-            "service": "Web development",
-            "client": "Amrit Subedi (Founder of Shayata)"
-        },
-        "features": [
-            {
-                "title": "Service Request Form",
-                "description": "Users can fill out a detailed form to request various home repair services."
-            },
-            {
-                "title": "Service Categories",
-                "description": "The platform offers a wide range of service categories like plumbing, electrical, and home cleaning."
-            },
-            {
-                "title": "Admin Dashboard",
-                "description": "Admin dashboard to manage service requests, assign tasks, and view analytics."
-            },
-            {
-                "title": "User Dashboard",
-                "description": "Users have access to track service status and manage their requests."
-            },
-            {
-                "title": "Analytics",
-                "description": "Interactive charts and graphs to monitor service requests, deliveries, and other metrics."
-            }
-        ],
-        "technologies": [
-            "Next",
-            "CSS",
-            "Prisma",
-            "MongoDb",
-            "Git",
-            "Netlify",
-            "Postman",
-            "Resend"
-        ],
-        "challenges": [
-            {
-                "challenge": "Managing service requests and scheduling.",
-                "solution": "Implemented an effective task assignment system for admins and streamlined scheduling."
-            },
-            {
-                "challenge": "Ensuring smooth user experience without payment integration.",
-                "solution": "Created an easy-to-navigate interface and focused on offline payment methods."
-            }
-        ],
-        "gallery": [
-            "/shayata.png",
-            "/shayata1.png",
-            "/shayata2.png",
-            "/shayata_about.png"
-        ],
-        "liveDemo": "https://shayata.com",
-        "githubRepo": "https://github.com/sudip15622/shayata",
-        "role": "Full-stack developer",
-        "contributions": [
-            "Designed the frontend UI/UX",
-            "Implemented backend APIs for service requests and task management",
-            "Created interactive charts and analytics for the admin dashboard"
-        ],
-        "lessonsLearned": [
-            "Building scalable dashboards for users and admins",
-            "Handling data management in real-time applications",
-            "Ensuring seamless user experience without payment integration",
-            "Optimizing large datasets for fast load times"
-        ]
-    }
+    "features": [
+      {
+        "title": "User Authentication",
+        "description": "Secure login with NextAuth."
+      },
+      {
+        "title": "Fundraiser Creation",
+        "description": "Users can start a fundraiser with images, descriptions, and bank details."
+      },
+      {
+        "title": "Donation System",
+        "description": "Payments via eSewa and Khalti."
+      },
+      {
+        "title": "Admin Approval System",
+        "description": "Fundraisers require admin verification before going live."
+      },
+      {
+        "title": "Reporting System",
+        "description": "Users can report fraudulent fundraisers."
+      }
+    ],
+    "technologies": [
+      "Next",
+      "CSS",
+      "Prisma",
+      "MongoDb",
+      "Git",
+      "Netlify",
+      "Postman",
+      "Resend"
+    ],
+    "challenges": [
+      {
+        "challenge": "Integrating nepali payment gateways.",
+        "solution": "Used documentation of related gateways to implement payment system."
+      }
+    ],
+    "gallery": [
+      "/fundnepal.png",
+      "/fundnepal1.png",
+      "/fundnepal2.png",
+      "/fundnepal_about.png"
+    ],
+    "liveDemo": "https://fundnepal.netlify.app",
+    "githubRepo": "https://github.com/sudip15622/fundnepal",
+    "role": "Full-stack developer",
+    "contributions": [
+      "Designed the frontend",
+      "Implemented the backend API and authentication",
+      "Integrated the payment gateway"
+    ],
+    "lessonsLearned": [
+      "How to integrate third-party APIs",
+      "Managing state in large React applications",
+      "Optimizing database queries",
+      "Adding payment gateways in web applications"
+    ]
+  },
+  {
+    "id": "project-ii-shayata",
+    "title": "Shayata - Expert Home Fixes",
+    "baseLink": "projects/project-ii-shayata",
+    "category": "Web development",
+    "description": "Shayata is a platform that connects users with expert home repair professionals. Users can easily request home fixes, and the Shayata team delivers the services. The platform offers smooth user interaction and an easy-to-use admin dashboard.",
+    "bannerImage": "/shayata.png",
+    "featureImage": "/shayata_feature.png",
+    "aboutImage": "/shayata_about.png",
+    "overview": {
+      "date": "July 10, 2023",
+      "type": "Collaborative project",
+      "service": "Web development",
+      "client": "Amrit Subedi (Founder of Shayata)"
+    },
+    "features": [
+      {
+        "title": "Service Request Form",
+        "description": "Users can fill out a detailed form to request various home repair services."
+      },
+      {
+        "title": "Service Categories",
+        "description": "The platform offers a wide range of service categories like plumbing, electrical, and home cleaning."
+      },
+      {
+        "title": "Admin Dashboard",
+        "description": "Admin dashboard to manage service requests, assign tasks, and view analytics."
+      },
+      {
+        "title": "User Dashboard",
+        "description": "Users have access to track service status and manage their requests."
+      },
+      {
+        "title": "Analytics",
+        "description": "Interactive charts and graphs to monitor service requests, deliveries, and other metrics."
+      }
+    ],
+    "technologies": [
+      "Next",
+      "CSS",
+      "Prisma",
+      "MongoDb",
+      "Git",
+      "Netlify",
+      "Postman",
+      "Resend"
+    ],
+    "challenges": [
+      {
+        "challenge": "Managing service requests and scheduling.",
+        "solution": "Implemented an effective task assignment system for admins and streamlined scheduling."
+      },
+      {
+        "challenge": "Ensuring smooth user experience without payment integration.",
+        "solution": "Created an easy-to-navigate interface and focused on offline payment methods."
+      }
+    ],
+    "gallery": [
+      "/shayata.png",
+      "/shayata1.png",
+      "/shayata2.png",
+      "/shayata_about.png"
+    ],
+    "liveDemo": "https://shayata.com",
+    "githubRepo": "https://github.com/sudip15622/shayata",
+    "role": "Full-stack developer",
+    "contributions": [
+      "Designed the frontend UI/UX",
+      "Implemented backend APIs for service requests and task management",
+      "Created interactive charts and analytics for the admin dashboard"
+    ],
+    "lessonsLearned": [
+      "Building scalable dashboards for users and admins",
+      "Handling data management in real-time applications",
+      "Ensuring seamless user experience without payment integration",
+      "Optimizing large datasets for fast load times"
+    ]
+  },
+  {
+    "id": "project-iii-rentnest",
+    "title": "RentNest - Room Rental Platform",
+    "baseLink": "projects/project-iii-rentnest",
+    "category": "Web development",
+    "description": "RentNest is a platform that simplifies the process of finding and listing rental rooms. It connects property owners with tenants through a secure, user-friendly interface, offering efficient listing management, location-based search, and transparent communication.",
+    "bannerImage": "/rentnest.png",
+    "featureImage": "/rentnest_feature.png",
+    "aboutImage": "/rentnest_about.png",
+    "overview": {
+      "date": "July 25, 2025",
+      "type": "Solo project",
+      "service": "Full-stack web development",
+      "client": "Personal Project"
+    },
+    "features": [
+      {
+        "title": "Multi-Step Listing Creation",
+        "description": "Owners can easily create room listings through a guided multi-step form including basic info, specifications, pricing, location, and image uploads."
+      },
+      {
+        "title": "Real-Time Listing Preview",
+        "description": "Users can review their listings with live previews before publishing, ensuring accurate and well-presented content."
+      },
+      {
+        "title": "Search and Filter System",
+        "description": "Tenants can search rooms by city, district, or price range, and apply filters for room type and availability."
+      },
+      {
+        "title": "Dashboard Management",
+        "description": "Separate dashboards for owners and admins to manage listings, track activity, and review reports."
+      }
+    ],
+    "technologies": [
+      "Next",
+      "Nest",
+      "TypeScript",
+      "Tailwind",
+      "PostgreSQL",
+      "Prisma",
+      "Passport",
+      "Vercel",
+      "Render"
+    ],
+    "challenges": [
+      {
+        "challenge": "Managing state across multiple steps of the listing form.",
+        "solution": "Used Zustand with persistence middleware to handle multi-step form data efficiently and prevent data loss on reload."
+      },
+      {
+        "challenge": "Optimizing dashboard and listing pages for performance.",
+        "solution": "Used lazy loading for images and efficient data fetching patterns to ensure fast page load times."
+      }
+    ],
+    "gallery": [
+      "/rentnest.png",
+      "/rentnest1.png",
+      "/rentnest2.png",
+      "/rentnest_about.png"
+    ],
+    "liveDemo": "https://rent-nest-web.vercel.app",
+    "githubRepo": "https://github.com/sudip15622/rentnest",
+    "role": "Full-stack developer",
+    "contributions": [
+      "Developed responsive frontend using Next.js and Tailwind CSS",
+      "Designed and implemented custom backend API using NestJS",
+      "Built secure authentication system with NestJS passport",
+      "Designed admin and owner dashboards for efficient management"
+    ],
+    "lessonsLearned": [
+      "Managing complex form state across multiple steps",
+      "Design and implement custom backend with NestJS",
+      "Designing reusable and optimized dashboard layouts",
+      "Improving UX for both property owners and renters"
+    ]
+  }
 ]

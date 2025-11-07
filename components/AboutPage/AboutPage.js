@@ -10,10 +10,6 @@ import { MdOutlineDateRange } from "react-icons/md";
 import { CgWebsite } from "react-icons/cg";
 import { SlVector } from "react-icons/sl";
 import { AiOutlinePython } from "react-icons/ai";
-// import { FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
-// import { RiNextjsLine, RiVercelFill, RiTailwindCssFill } from "react-icons/ri";
-// import { SiExpress, SiMongodb, SiScikitlearn, SiNumpy, SiPandas, SiNetlify } from "react-icons/si";
-// import { TbBrandAdobeIllustrator } from "react-icons/tb";
 
 const AboutPage = () => {
 
@@ -69,11 +65,11 @@ const AboutPage = () => {
       description: "Creating responsive and interactive websites using modern frameworks.",
       icon: <CgWebsite />
     },
-    {
-      title: "Python & AI / ML",
-      description: "Exploring machine learning and AI to build intelligent applications.",
-      icon: <AiOutlinePython />
-    },
+    // {
+    //   title: "Python & AI / ML",
+    //   description: "Exploring machine learning and AI to build intelligent applications.",
+    //   icon: <AiOutlinePython />
+    // },
     {
       title: "Vector Tracing",
       description: "Recreating high-quality vector graphics with precision.",
@@ -85,24 +81,24 @@ const AboutPage = () => {
     "HTML",
     "CSS",
     "JavaScript",
+    "TypeScript",
     "Tailwind",
     "Node",
     "React",
     "Next",
     "Express",
+    "NestJS",
     "MongoDb",
+    "PostgreSQL",
     "Python",
-    "Sk-Learn",
-    "Numpy",
-    "Pandas",
+    "Passport",
     "Git",
     "Github",
     "Netlify",
     "Vercel",
+    "Render",
     "Illustrator",
   ];
-
-
 
   return (
     <main>
@@ -119,9 +115,9 @@ const AboutPage = () => {
           <h1 className='sm:text-5xl text-4xl font-bold mb-2'>
             I'm Sudip Lamichhane
           </h1>
-          <p className="text-[1.5rem]">A proficient web developer & AI/ML enthusiast</p>
+          <p className="text-[1.5rem]">A proficient full-stack developer</p>
           <p className="w-full lg:max-w-[600px] text-[1.1rem] text-[var(--sec-text)] my-3">
-            I'm Sudip, a Web Developer passionate about crafting dynamic, high-performing websites. With expertise in React.js, Next.js, and Node.js, I focus on building clean, scalable, and user-friendly solutions. My journey began with Python, eventually leading me to full-stack development, where I blend creativity with problem-solving to deliver seamless digital experiences.
+            I'm Sudip, a full-stack Developer passionate about crafting dynamic, high-performing websites. With expertise in React.js, Next.js, and Node.js, I focus on building clean, scalable, and user-friendly solutions. My journey began with Python, eventually leading me to full-stack development, where I blend creativity with problem-solving to deliver seamless digital experiences.
           </p>
           <div className='flex gap-10 items-center mt-8'>
             <LinkBtn link={"/contact"} text={"Get in touch"} />

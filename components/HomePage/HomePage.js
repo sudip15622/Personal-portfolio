@@ -24,11 +24,11 @@ const Home = () => {
       description: "View all web development projects i have done and services i provide.",
       icon: <CgWebsite />
     },
-    {
-      title: "Python & AI / ML",
-      description: "View all python and AI / ML projects i have done and services i provide.",
-      icon: <AiOutlinePython />
-    },
+    // {
+    //   title: "Python & AI / ML",
+    //   description: "View all python and AI / ML projects i have done and services i provide.",
+    //   icon: <AiOutlinePython />
+    // },
     {
       title: "Vector Tracing",
       description: "View all vector tracing projects i have done and services i provide.",
@@ -66,10 +66,10 @@ const Home = () => {
           </h1>
           <div className='flex items-center gap-x-2 text-[var(--action-color)] my-4'>
             <span className="text-[1.2rem]"><LuArrowBigRightDash /></span>
-            <p className="text-[1.3rem]">Web Developer | AI / ML Enthusiast</p>
+            <p className="text-[1.3rem]">Full-Stack Developer</p>
           </div>
           <p className="w-full lg:max-w-[700px] text-[1.1rem] text-[var(--sec-text)] my-3">
-            Hi, I'm Sudip, a Web Developer passionate about building dynamic, user-friendly websites. With expertise in React.js, Next.js, and Node.js, I create seamless digital experiences with clean code and intuitive design. Let’s bring ideas to life!
+            Hi, I'm Sudip, a Full-Stack Developer passionate about building dynamic, user-friendly websites. With expertise in React.js, Next.js, and Node.js, I create seamless digital experiences with clean code and intuitive design. Let's bring ideas to life!
           </p>
           <div className='flex gap-10 items-center mt-8'>
             <LinkBtn link={"/contact"} text={"Get in touch"} />
